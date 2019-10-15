@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:background="@color/white"
+              android:layout_height="wrap_content"
+    >
+    
+    
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp20"
+        android:background="@color/white"
+        >
+        
+        
+        <ImageView
+            android:id="@+id/iv_cer"
+            android:layout_width="@dimen/dp150"
+            android:layout_height="@dimen/dp102"
+            android:background="@drawable/bg_default_cer"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_cer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="恭喜您通过食品安全考核"
+            android:layout_below="@+id/iv_cer"
+            android:singleLine="true"
+            android:textSize="@dimen/sp10"
+            android:ellipsize="end"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp5"
+            />
+        
+    </RelativeLayout>
+    
+    
+
+</LinearLayout>

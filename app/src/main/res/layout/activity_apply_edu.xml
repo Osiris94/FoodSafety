@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <include layout="@layout/layout_title"/>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="@dimen/dp334"
+                android:layout_height="@dimen/dp173"
+                android:layout_gravity="center_horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_marginTop="@dimen/dp21"
+                android:background="@drawable/bg_apply_edu_select"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/rl_choose_work"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp37"
+                    android:layout_marginTop="@dimen/dp27"
+                    android:layout_marginRight="@dimen/dp27"
+                    >
+
+
+                    <ImageView
+                        android:id="@+id/iv_org"
+                        android:layout_width="@dimen/dp34"
+                        android:layout_height="@dimen/dp40"
+                        android:background="@drawable/bg_select_train"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_org_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:layout_toRightOf="@+id/iv_org"
+                        android:text="@string/choose_org"
+                        android:textColor="@color/txt_important_black_51"
+                        android:textSize="@dimen/sp14"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_org_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_org_title"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:layout_marginTop="@dimen/dp2"
+                        android:layout_toRightOf="@+id/iv_org"
+                        android:text="泰州市海陵区食品监督管理局"
+                        android:textColor="@color/txt_black_102"
+                        android:textSize="@dimen/sp12"
+                        />
+
+
+                    <ImageView
+                        android:layout_width="@dimen/dp27"
+                        android:layout_height="@dimen/dp27"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/bg_training_arrow"
+                        />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:layout_marginLeft="@dimen/dp27"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginRight="@dimen/dp27"
+                    android:background="@color/gray_line_e3"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/rl_choose_job"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp37"
+                    android:layout_marginTop="@dimen/dp27"
+                    android:layout_marginRight="@dimen/dp27"
+                    >
+
+
+                    <ImageView
+                        android:id="@+id/iv_job"
+                        android:layout_width="@dimen/dp34"
+                        android:layout_height="@dimen/dp40"
+                        android:background="@drawable/bg_select_job"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_job_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:layout_toRightOf="@+id/iv_job"
+                        android:text="@string/choose_job"
+                        android:textColor="@color/txt_important_black_51"
+                        android:textSize="@dimen/sp14"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_job_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_job_title"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:layout_marginTop="@dimen/dp2"
+                        android:text="餐饮行业"
+                        android:layout_toRightOf="@+id/iv_job"
+                        android:textColor="@color/txt_black_102"
+                        android:textSize="@dimen/sp12"
+                        />
+
+
+                    <ImageView
+                        android:layout_width="@dimen/dp27"
+                        android:layout_height="@dimen/dp27"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/bg_training_arrow"
+                        />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

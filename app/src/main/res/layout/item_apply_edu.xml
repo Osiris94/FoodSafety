@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="@dimen/dp334"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp15"
+        android:background="@drawable/bg_apply_edu_select"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_title"
+            android:text="2018~2019年度初级食品安全培训"
+            android:layout_marginTop="@dimen/dp27"
+            android:layout_marginLeft="@dimen/dp37"
+            android:textColor="@color/txt_important_black_51"
+            android:textSize="@dimen/sp14"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_price"
+            android:text="¥100"
+            android:layout_marginTop="@dimen/dp11"
+            android:layout_marginLeft="@dimen/dp37"
+            android:textColor="@color/red"
+            android:textSize="@dimen/sp14"
+
+            />
+<!--    级别：初级
+    项目编号：0018J0004-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_level"
+            android:text="级别：初级"
+            android:layout_marginTop="@dimen/dp17"
+            android:layout_marginLeft="@dimen/dp37"
+            android:textColor="@color/txt_black_102"
+            android:textSize="@dimen/sp14"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_project_id"
+            android:layout_marginTop="@dimen/dp9"
+            android:layout_marginLeft="@dimen/dp37"
+            android:text="项目编号：0018J0004"
+            android:textColor="@color/txt_black_102"
+            android:textSize="@dimen/sp14"
+
+            />
+
+
+        <TextView
+            android:id="@+id/tv_apply"
+            android:layout_width="@dimen/dp266"
+            android:layout_height="@dimen/dp43"
+            android:background="@drawable/bg_round_blue_btn"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/apply"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp16"
+            android:layout_marginTop="@dimen/dp23"
+            />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

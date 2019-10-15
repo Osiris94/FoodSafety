@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+    >
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp240"
+                android:background="@color/white"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp120"
+                    android:background="@drawable/bg_top_title"
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp26"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp27"
+                        android:background="@drawable/bg_top_title_name"
+                        >
+
+                        <TextView
+                            android:id="@+id/tv_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp16"
+                            android:singleLine="true"
+                            android:text="海陵区食品安全培训学习平台"
+                            />
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+                <com.osiris.food.view.widget.RoundImageView
+                    android:id="@+id/iv_title_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp159"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:layout_marginBottom="@dimen/dp14"
+                    android:background="@drawable/ic_home_bar"
+                    />
+
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp25"
+                android:layout_marginRight="@dimen/dp25"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:id="@+id/linear_policy_regulation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/dp53"
+                        android:layout_height="@dimen/dp53"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/bg_policy_regualition"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:text="@string/policy_regulation"
+                        android:textColor="@color/txt_important_black_51"
+                        android:textSize="@dimen/sp14"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_city_dynamic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/dp53"
+                        android:layout_height="@dimen/dp53"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/bg_city_dynamic"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:text="@string/city_dynamic"
+                        android:textColor="@color/txt_important_black_51"
+                        android:textSize="@dimen/sp14"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_industry_information"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/dp53"
+                        android:layout_height="@dimen/dp53"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/bg_industry_information"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:text="@string/industry_information"
+                        android:textColor="@color/txt_important_black_51"
+                        android:textSize="@dimen/sp14"
+                        />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp8"
+                android:layout_marginTop="@dimen/dp15"
+                android:background="#EEEEEE"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp15"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:background="@drawable/bg_food_news"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_news_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:textColor="@color/txt_important_black_51"
+                    />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp8"
+                android:layout_marginTop="@dimen/dp15"
+                android:background="#EEEEEE"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginTop="@dimen/dp18">
+
+
+                <ImageView
+                    android:id="@+id/iv_blue"
+                    android:layout_width="@dimen/dp6"
+                    android:layout_height="@dimen/dp17"
+                    android:layout_centerVertical="true"
+                    android:background="@color/color_blue_btn"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp6"
+                    android:layout_toRightOf="@+id/iv_blue"
+                    android:text="@string/latest_news"
+                    android:textColor="@color/txt_important_black_51"
+                    android:textSize="@dimen/sp14"
+                    />
+
+
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

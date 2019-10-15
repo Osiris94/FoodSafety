@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/linear_replay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp55"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        >
+
+
+        <ImageView
+            android:layout_width="@dimen/dp24"
+            android:layout_height="@dimen/dp24"
+            android:background="@drawable/bg_expression"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp17"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp17"
+            android:background="@drawable/bg_train_replay"
+            android:layout_height="@dimen/dp37">
+
+            <EditText
+                android:id="@+id/edt_replay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                />
+
+            <TextView
+                android:layout_width="@dimen/dp67"
+                android:layout_height="@dimen/dp29"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp5"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_round_blue_btn"
+                android:text="@string/send_replay"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp12"
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <ExpandableListView
+        android:id="@+id/main_commentList_elv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:childDivider="@android:color/transparent"
+        android:layout_above="@+id/linear_replay"
+       />
+
+
+
+
+
+</RelativeLayout>

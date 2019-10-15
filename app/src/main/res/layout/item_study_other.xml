@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp100"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp15"
+        android:background="@drawable/bg_item_my_study"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_news_pic"
+                    android:layout_width="@dimen/dp111"
+                    android:layout_height="@dimen/dp63"
+                    android:layout_marginLeft="@dimen/dp25"
+                    android:layout_marginTop="@dimen/dp13"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:background="@drawable/ic_place"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp13"
+                    android:orientation="vertical"
+                    >
+                    <!-- 主讲：食品安全
+                     2018-01-01至2019-01-01
+                     课程时长：3分21秒
+                     已观看时长：0分0秒-->
+                    <com.osiris.food.view.widget.CustomTextView
+                        android:id="@+id/tv_news_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp13"
+                        android:layout_marginRight="@dimen/dp11"
+                        android:layout_toLeftOf="@+id/iv_news_pic"
+                        android:breakStrategy="simple"
+                        android:text="泰州市政协副ssssssssss主席、市场监督局局长接听12345热线市民来电"
+                        android:textColor="@color/txt_important_black_51"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_news_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="@dimen/dp10"
+
+                        android:text="2019-06-08"
+                        android:textColor="@color/txt_hint_input_gray_153"
+                        android:textSize="@dimen/sp14"
+                        />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

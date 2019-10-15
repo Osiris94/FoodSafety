@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--子评论Item-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+
+    <TextView
+            android:id="@+id/commentListViewChildItem_userName_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="39dp"
+            android:text="小尼玛"
+            android:textSize="12sp"
+            android:textColor="@color/txt_gray_151"/>
+
+    <TextView
+            android:id="@+id/commentListViewChildItem_content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/commentListViewChildItem_userName_tv"
+            android:layout_below="@+id/commentListViewChildItem_userName_tv"
+            android:text="这是评论回复的内容"
+            android:layout_marginLeft="@dimen/dp10"
+            android:textSize="13sp"
+            android:textColor="#454545"/>
+
+</LinearLayout>

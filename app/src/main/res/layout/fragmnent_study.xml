@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_top_title"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp64"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="@dimen/dp50"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/dp10"
+                android:layout_height="@dimen/dp17"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_back" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp202"
+            android:layout_height="@dimen/dp26"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_top_title_name">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/study"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp16" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_title"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/relative_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp40"
+                android:layout_marginTop="@dimen/dp22"
+                android:layout_marginRight="@dimen/dp40"
+                android:layout_marginBottom="@dimen/dp22"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+
+                >
+
+
+                <TextView
+                    android:id="@+id/tv_food_safe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/food_safe_train"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp18" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp3"
+                    android:layout_below="@+id/tv_food_safe"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view"
+                    android:layout_centerHorizontal="true"
+                    android:text="有效期2019.04.29至2019.08.30"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp15"
+                    android:visibility="invisible" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/view_line"
+                android:layout_below="@+id/relative_info"
+                android:layout_marginTop="@dimen/dp70"
+                android:background="#F0F0F0">
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_middle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative_info"
+                android:layout_marginLeft="@dimen/dp19"
+                android:layout_marginRight="@dimen/dp19"
+                android:background="@drawable/bg_white_round"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp56"
+                    android:layout_marginTop="@dimen/dp10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp17"
+                        android:text="@string/study"
+                        android:textColor="@color/txt_important_black_51"
+                        android:textSize="@dimen/sp14" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp15"
+                        android:orientation="horizontal">
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_apply_record"
+                            android:layout_width="@dimen/dp90"
+                            android:layout_height="@dimen/dp28"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/dp10"
+                            android:background="@drawable/bg_study_score">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:drawableLeft="@drawable/bg_drawable_study"
+                                android:drawablePadding="@dimen/dp3"
+                                android:gravity="center"
+                                android:text="@string/apply_record"
+                                android:textColor="@color/txt_important_black_51"
+                                android:textSize="@dimen/sp12" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_training_record"
+                            android:layout_width="@dimen/dp90"
+                            android:layout_height="@dimen/dp28"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/bg_study_score">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:drawableLeft="@drawable/bg_drawable_study"
+                                android:drawablePadding="@dimen/dp3"
+                                android:gravity="center"
+                                android:text="@string/training_record"
+                                android:textColor="@color/txt_important_black_51"
+                                android:textSize="@dimen/sp12" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp4"
+                    android:layout_marginLeft="@dimen/dp15"
+                    android:layout_marginRight="@dimen/dp15"
+                    android:background="@color/gray_line_e3" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp30"
+                    android:layout_marginTop="@dimen/dp28"
+                    android:layout_marginRight="@dimen/dp30"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/tv_study_score"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="500"
+                            android:textColor="@color/txt_important_black_51"
+                            android:textSize="@dimen/sp20"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:text="总积分"
+                            android:textColor="@color/txt_important_black_51"
+                            android:textSize="@dimen/sp14"
+
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/tv_total_score"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="500"
+                            android:textColor="@color/txt_important_black_51"
+                            android:textSize="@dimen/sp20"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:text="学习积分"
+                            android:textColor="@color/txt_important_black_51"
+                            android:textSize="@dimen/sp14"
+
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/tv_complete_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="20"
+                            android:textColor="@color/txt_important_black_51"
+                            android:textSize="@dimen/sp20"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:text="还需学习积分"
+                            android:textColor="@color/txt_important_black_51"
+                            android:textSize="@dimen/sp14"
+
+                            />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_face_check"
+                    android:layout_width="@dimen/dp200"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:background="@drawable/bg_study_face"
+                    android:gravity="center"
+                    android:text="@string/face_training_check"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp14"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tv_confirm_note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:drawableLeft="@drawable/bg_confirm_note"
+                    android:drawablePadding="@dimen/dp3"
+                    android:paddingBottom="@dimen/dp12"
+                    android:text="@string/confirm_note" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp13"
+                android:layout_below="@+id/linear_middle"
+                android:background="#F0F0F0" />
+
+            <LinearLayout
+                android:id="@+id/ll_study_find"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_line"
+                android:background="#F0F0F0"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginRight="19dp"
+                    android:background="@color/white"
+                    android:paddingLeft="19dp"
+                    android:paddingRight="19dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="课程："
+                        android:textSize="@dimen/sp16" />
+
+                    <EditText
+                        android:id="@+id/et_study_find"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="请输入课程名"
+                        android:padding="10dp"
+                        android:textSize="@dimen/sp16" />
+
+                    <Button
+                        android:id="@+id/btn_study_find"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="@drawable/bg_study_blue_btn"
+                        android:gravity="center"
+                        android:text="查询"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <com.osiris.food.view.PagerSlidingTabStrip
+                android:id="@+id/tab_strip"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_below="@+id/ll_study_find"
+                android:background="#F0F0F0"
+                android:paddingTop="10dp"
+                app:pstsDividerColor="#F0F0F0"
+                app:pstsIndicatorColor="@color/color_blue_btn"
+                app:pstsIndicatorHeight="@dimen/dp5"
+                app:pstsIndicatorMarginLeft="@dimen/dp30"
+                app:pstsIndicatorMarginRight="@dimen/dp30"
+                app:pstsShouldExpand="true"
+                app:pstsUnderlineColor="#F0F0F0" />
+
+            <com.osiris.food.view.MyViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_below="@id/tab_strip" />
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>

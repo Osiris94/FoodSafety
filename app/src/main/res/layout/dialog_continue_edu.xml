@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="@dimen/dp300"
+        android:layout_height="@dimen/dp224"
+        android:background="@drawable/bg_white_round"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_regist_sucess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp18"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/txt_hint"
+            android:textColor="@color/txt_important_black_51"
+            android:textSize="@dimen/sp18"
+
+            />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_05"
+            android:layout_marginTop="@dimen/dp18"
+            android:background="@color/gray_line_e3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请您先点击选择就业"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/view_line"
+            android:layout_marginTop="@dimen/dp21"
+            android:layout_marginLeft="@dimen/dp22"
+            android:layout_marginRight="@dimen/dp22"
+            android:textSize="@dimen/sp14"
+            android:textColor="@color/txt_important_black_51"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_confirn"
+                android:layout_width="@dimen/dp139"
+                android:layout_height="@dimen/dp40"
+                android:background="@drawable/bg_edu_button_dialog"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/txt_know"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp16" />
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>

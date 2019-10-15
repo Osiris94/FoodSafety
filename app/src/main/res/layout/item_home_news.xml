@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    
+    
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        
+        <ImageView
+            android:id="@+id/iv_news_pic"
+            android:layout_width="@dimen/dp75"
+            android:layout_height="@dimen/dp57"
+            android:scaleType="fitXY"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_place"
+            android:layout_marginTop="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp18"
+
+            />
+
+
+
+        <com.osiris.food.view.widget.CustomTextView
+            android:id="@+id/tv_news_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/iv_news_pic"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp20"
+            android:textColor="@color/txt_important_black_51"
+            android:layout_marginRight="@dimen/dp11"
+            android:breakStrategy="simple"
+            android:text="泰州市政协副主席、市场监督局局长接听12345热线市民来电"
+
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/iv_news_pic"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp11"
+            android:layout_below="@+id/tv_news_name"
+            android:layout_marginTop="@dimen/dp5"
+            >
+
+
+            <TextView
+                android:id="@+id/tv_news_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/city_dynamic"
+                android:textSize="@dimen/sp14"
+                android:textColor="@color/txt_hint_input_gray_153"
+                />
+            <TextView
+                android:id="@+id/tv_news_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2019-06-08"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/sp14"
+                android:textColor="@color/txt_hint_input_gray_153"
+                />
+
+        </RelativeLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:background="@color/gray_line_e3"
+            android:layout_marginLeft="@dimen/dp14"
+            android:layout_marginRight="@dimen/dp14"
+            android:layout_below="@+id/rl_type"
+            android:layout_marginTop="@dimen/dp20"
+            />
+
+
+        
+    </RelativeLayout>
+    
+    
+    
+    
+    
+
+</LinearLayout>

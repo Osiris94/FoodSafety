@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp133"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:background="@drawable/bg_train_record"
+        android:orientation="vertical"
+        >
+
+
+        <TextView
+            android:id="@+id/tv_train_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp47"
+            android:layout_marginTop="@dimen/dp18"
+            android:text="2018~2019年度食品安全管理人员培训"
+            android:textColor="@color/txt_important_black_51"
+            android:textSize="@dimen/sp14"
+            />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp18"
+            android:layout_marginRight="@dimen/dp16"
+            android:background="@color/gray_line_e3"
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp47"
+                android:layout_marginTop="@dimen/dp9"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="类别："
+                    android:textColor="@color/txt_important_black_51"
+                    android:textSize="@dimen/sp12"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="时间："
+                    android:textColor="@color/txt_important_black_51"
+                    android:textSize="@dimen/sp12"
+                    />
+                <TextView
+                    android:id="@+id/tv_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/txt_important_black_51"
+                    android:textSize="@dimen/sp12"
+                    />
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp9"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2019"
+                    android:textColor="@color/txt_important_black_51"
+                    android:textSize="@dimen/sp12"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2019-02-02"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/txt_important_black_51"
+                    android:textSize="@dimen/sp12"
+                    />
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="90"
+        android:endColor="#c0000000"
+        android:startColor="#c0000000"/><!--背景颜色渐变 angle为渐变角度-->
+    <solid android:color="@color/color_blue_btn"/><!-- 背景填充颜色 -->
+    <stroke
+        android:width="@dimen/dp1"
+        android:color="@color/color_blue_btn"/><!-- 描边，边框宽度、颜色 -->
+    <corners android:radius="@dimen/dp45"/><!-- 边角圆弧的半径 -->
+    <padding
+        android:bottom="@dimen/dp8"
+        android:left="@dimen/dp8"
+        android:right="@dimen/dp8"
+        android:top="@dimen/dp8"/><!-- 四周留出来的空白 -->
+</shape>

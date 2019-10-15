@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include
+        layout="@layout/layout_title"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_data_null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp183"
+                android:layout_height="@dimen/dp141"
+                android:background="@drawable/bg_apply_null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp30"
+                android:text="申请食品安全管理员证"
+                android:textColor="@color/txt_hint_input_gray_153"
+                android:textSize="@dimen/sp16" />
+
+
+            <TextView
+                android:id="@+id/tv_continue_edu"
+                android:layout_width="@dimen/dp201"
+                android:layout_height="@dimen/dp48"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp71"
+                android:background="@drawable/bg_edu_button_dialog"
+                android:gravity="center"
+                android:text="申请食品安全管理员证"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp16" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

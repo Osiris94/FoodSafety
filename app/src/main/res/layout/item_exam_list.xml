@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp86"
+        android:layout_marginTop="@dimen/dp16"
+        >
+
+        <TextView
+            android:id="@+id/tv_exam_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017~2018年度食品安全管理员2018年度食品安全管理员初级考试初级考试"
+            android:textColor="@color/txt_important_black_51"
+            android:textSize="@dimen/sp14"
+            android:layout_marginRight="@dimen/dp75"
+            android:layout_marginLeft="@dimen/dp20"
+            />
+        <TextView
+            android:id="@+id/tv_passed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已通过"
+            android:visibility="gone"
+            android:textColor="@color/txt_important_black_51"
+            android:textSize="@dimen/sp14"
+            android:layout_below="@+id/tv_exam_name"
+            android:layout_marginRight="@dimen/dp75"
+            android:layout_marginLeft="@dimen/dp20"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_passed"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp75"
+            android:layout_marginTop="@dimen/dp10"
+            >
+
+            <TextView
+                android:id="@+id/tv_subject_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_blue_btn"
+                android:textSize="@dimen/sp12"
+                android:text="20"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/txt_black_102"
+                android:textSize="@dimen/sp12"
+                android:layout_toRightOf="@+id/tv_subject_num"
+                android:text="@string/exam_subject_count"
+                />
+            
+            
+            <ImageView
+                android:id="@+id/iv_hot"
+                android:layout_width="@dimen/dp10"
+                android:layout_height="@dimen/dp13"
+                android:background="@drawable/bg_hot"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                />
+            <TextView
+                android:id="@+id/tv_history_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_count"
+                android:textColor="@color/txt_black_102"
+                android:textSize="@dimen/sp12"
+                android:text="@string/exam_subject_history"
+                />
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/iv_hot"
+                android:textColor="@color/color_blue_btn"
+                android:layout_marginRight="@dimen/dp10"
+                android:textSize="@dimen/sp12"
+                android:text="0  "
+                />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_arrow_gray_to"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp20"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_line_e3"/>
+
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

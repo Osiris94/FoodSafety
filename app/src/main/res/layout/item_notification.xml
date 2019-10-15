@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp120"
+        >
+
+
+        <com.osiris.food.view.CircleImageView
+            android:id="@+id/civ_point"
+            android:layout_width="@dimen/dp16"
+            android:layout_height="@dimen/dp16"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp33"
+            android:src="@color/color_blue_btn"
+            />
+
+        <com.osiris.food.view.widget.CustomTextView
+            android:id="@+id/tv_notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp78"
+            android:layout_marginLeft="@dimen/dp13"
+            android:textSize="@dimen/sp14"
+            android:layout_toRightOf="@+id/civ_point"
+            android:textColor="@color/txt_important_black_51"
+            />
+
+        <View
+            android:layout_width="@dimen/dp1"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/civ_point"
+            android:layout_marginLeft="@dimen/dp41"
+            android:background="@color/gray_line_e3"
+            />
+        <View
+            android:id="@+id/view_top"
+            android:layout_width="@dimen/dp1"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/civ_point"
+            android:layout_marginLeft="@dimen/dp41"
+            android:background="@color/gray_line_e3"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp78"
+            android:layout_below="@+id/tv_notification"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_toRightOf="@+id/civ_point"
+            >
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp13"
+                android:text="2019-06-07"
+                android:textColor="@color/txt_hint_input_gray_153"
+                />
+
+            <TextView
+                android:id="@+id/tv_notification_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/dp13"
+                android:text="@string/txt_system_notification"
+                android:textColor="@color/txt_hint_input_gray_153"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_marginLeft="@dimen/dp48"
+            android:layout_marginRight="@dimen/dp25"
+            android:background="@color/gray_line_e3"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
