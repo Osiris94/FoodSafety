@@ -122,6 +122,8 @@ public class PolicyRuleFragment extends BaseFragment {
 						studyCourse.setCourseName(bean.getTitle());
 						studyCourse.setStartTime(bean.getStart_time());
 						studyCourse.setVisited(bean.getVisited());
+						studyCourse.setVisited(bean.getVisited());
+						studyCourse.setScore(bean.getScore());
 						//	studyCourse.setEndTime(learnsMajorBean.getData().getLesson().getEnd_time());
 						//	studyCourse.setCourseTime(bean.getTime());
 						//	studyCourse.setCourseLook(bean.getVisited());

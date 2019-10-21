@@ -12,6 +12,7 @@ public class StudyCourse {
 	private int lessonId;
 	private int id;
 	private int visited;
+	private int score;
 
 	public StudyCourse() {
 
@@ -24,6 +25,14 @@ public class StudyCourse {
 		this.endTime = endTime;
 		this.courseTime = courseTime;
 		this.courseLook = courseLook;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
 	}
 
 	public int getVisited() {
