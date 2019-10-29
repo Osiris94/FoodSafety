@@ -1,33 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:gravity="center_horizontal"
-              android:orientation="vertical"
-              android:background="@color/white"
-              tools:context=".login.LoginActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".login.LoginActivity">
 
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp179">
+        android:layout_height="@dimen/dp240">
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp140"
+            android:layout_height="@dimen/dp220"
             android:background="@drawable/bg_top_img">
 
 
         </ImageView>
 
-        <ImageView
-            android:layout_width="@dimen/dp78"
-            android:layout_height="@dimen/dp78"
+        <LinearLayout
+            android:layout_width="@dimen/dp250"
+            android:layout_height="@dimen/dp40"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/bg_login_icon"/>
+            android:background="@drawable/bg_login_title"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_login_blue_title"
+                android:gravity="center"
+                android:text="登录"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="注册"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14" />
+
+        </LinearLayout>
 
     </RelativeLayout>
 
@@ -49,14 +71,14 @@
             <ImageView
                 android:layout_width="@dimen/dp17"
                 android:layout_height="@dimen/dp25"
-                android:background="@drawable/bg_login_phone"/>
+                android:background="@drawable/bg_login_phone" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/dp15"
                 android:text="+86"
-                android:textColor="@color/txt_important_black_51"/>
+                android:textColor="@color/black" />
 
             <View
                 android:layout_width="@dimen/dp1"
@@ -64,7 +86,7 @@
                 android:layout_marginLeft="@dimen/dp15"
                 android:layout_marginTop="@dimen/dp15"
                 android:layout_marginBottom="@dimen/dp15"
-                android:background="@color/txt_hint_input_gray_191"/>
+                android:background="@color/txt_hint_input_gray_191" />
 
             <EditText
                 android:id="@+id/edt_phone"
@@ -74,14 +96,15 @@
                 android:background="@null"
                 android:hint="@string/txt_login_input_phone"
                 android:textColorHint="@color/txt_hint_input_gray_191"
-                android:textSize="@dimen/sp14"/>
+                android:textSize="@dimen/sp14" />
 
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp1"
-            android:background="@color/gray_line_e3"
-            />
+            android:background="@color/gray_line_e3" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp50"
@@ -92,7 +115,7 @@
             <ImageView
                 android:layout_width="@dimen/dp15"
                 android:layout_height="@dimen/dp25"
-                android:background="@drawable/bg_login_pwd"/>
+                android:background="@drawable/bg_login_pwd" />
 
 
             <EditText
@@ -104,28 +127,29 @@
                 android:hint="@string/txt_login_input_pwd"
                 android:inputType="textPassword"
                 android:textColorHint="@color/txt_hint_input_gray_191"
-                android:textSize="@dimen/sp14"/>
+                android:textSize="@dimen/sp14" />
 
 
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp1"
-            android:background="@color/gray_line_e3"
-            />
+            android:background="@color/gray_line_e3" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp50"
-            android:visibility="gone"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/iv_code"
                 android:layout_width="@dimen/dp21"
                 android:layout_height="@dimen/dp21"
                 android:layout_centerVertical="true"
-                android:background="@drawable/bg_login_code"/>
+                android:background="@drawable/bg_login_code" />
 
 
             <EditText
@@ -138,7 +162,7 @@
                 android:background="@null"
                 android:hint="@string/txt_login_input_code"
                 android:textColorHint="@color/txt_hint_input_gray_191"
-                android:textSize="@dimen/sp14"/>
+                android:textSize="@dimen/sp14" />
 
             <TextView
                 android:id="@+id/tv_send"
@@ -148,7 +172,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp15"
                 android:text="@string/txt_login_getcode"
-                android:textColor="@color/txt_important_black_51"/>
+                android:textColor="@color/txt_important_black_51" />
 
             <View
                 android:layout_width="@dimen/dp1"
@@ -157,37 +181,34 @@
                 android:layout_marginTop="@dimen/dp15"
                 android:layout_marginBottom="@dimen/dp15"
                 android:layout_toLeftOf="@+id/tv_send"
-                android:background="@color/txt_hint_input_gray_191"/>
+                android:background="@color/txt_hint_input_gray_191" />
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp1"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="@dimen/dp3"
-                android:background="@color/gray_line_e3"
-                />
+                android:background="@color/gray_line_e3" />
         </RelativeLayout>
 
 
     </LinearLayout>
 
 
-
     <Button
         android:id="@+id/btn_login"
         style="?android:attr/borderlessButtonStyle"
-        android:layout_width="@dimen/dp305"
-        android:layout_height="@dimen/dp55"
+        android:layout_width="@dimen/dp240"
+        android:layout_height="@dimen/dp40"
         android:background="@drawable/bg_button"
-        android:paddingBottom="@dimen/dp4"
         android:text="@string/txt_login"
         android:textColor="@color/white"
-        android:textSize="@dimen/sp16"/>
+        android:textSize="@dimen/sp16" />
 
     <RelativeLayout
         android:layout_width="@dimen/dp265"
         android:layout_height="@dimen/dp15"
-        android:layout_marginTop="@dimen/dp10"
-        >
+        android:layout_marginTop="@dimen/dp10">
 
         <TextView
             android:id="@+id/tv_forget_pwd"
@@ -195,8 +216,7 @@
             android:layout_height="wrap_content"
             android:text="@string/txt_forget_pwd"
             android:textColor="@color/txt_auxiliary_gray"
-            android:textSize="@dimen/sp12"
-            />
+            android:textSize="@dimen/sp12" />
 
         <TextView
             android:id="@+id/tv_regist"
@@ -205,37 +225,34 @@
             android:layout_alignParentRight="true"
             android:text="@string/txt_stu_regist"
             android:textColor="@color/color_blue_btn"
-            android:textSize="@dimen/sp12"
-            />
+            android:textSize="@dimen/sp12" />
 
     </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="@dimen/dp305"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp16"
-        >
+        android:layout_marginTop="@dimen/dp16">
 
         <CheckBox
             android:id="@+id/checkbox_policy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:button="@null"
-            android:checked="true"
             android:background="@drawable/bg_checkbox_policy"
-            />
+            android:button="@null"
+            android:checked="true" />
 
         <TextView
             android:id="@+id/tv_policy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/txt_policy"
-            android:layout_toRightOf="@+id/checkbox_policy"
-            android:layout_marginLeft="@dimen/dp10"
             android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toRightOf="@+id/checkbox_policy"
+            android:text="@string/txt_policy"
             android:textColor="@color/color_blue_btn"
-            android:textSize="@dimen/sp14"
-            />
+            android:textSize="@dimen/sp14" />
 
     </RelativeLayout>
 

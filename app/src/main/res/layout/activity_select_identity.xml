@@ -1,35 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:gravity="center_horizontal"
-              android:orientation="vertical"
-              android:background="@color/white"
-              tools:context=".login.LoginActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".login.LoginActivity">
 
 
     <RelativeLayout
         android:id="@+id/rl_top"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp179">
+        android:layout_height="@dimen/dp240">
 
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp140"
+            android:layout_height="@dimen/dp220"
             android:background="@drawable/bg_top_img">
-
 
         </ImageView>
 
-        <ImageView
-            android:layout_width="@dimen/dp78"
-            android:layout_height="@dimen/dp78"
+        <LinearLayout
+            android:layout_width="@dimen/dp250"
+            android:layout_height="@dimen/dp40"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/bg_choose_identity"/>
+            android:background="@drawable/bg_login_title"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="登录"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_login_blue_title"
+                android:gravity="center"
+                android:text="注册"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp14" />
+
+        </LinearLayout>
+
         <RelativeLayout
             android:id="@+id/rl_back"
             android:layout_width="@dimen/dp50"
@@ -38,9 +60,8 @@
             <ImageView
                 android:layout_width="@dimen/dp10"
                 android:layout_height="@dimen/dp17"
-                android:background="@drawable/bg_back"
                 android:layout_centerInParent="true"
-                />
+                android:background="@drawable/bg_back" />
 
         </RelativeLayout>
 
@@ -52,44 +73,43 @@
         android:id="@+id/rv_data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/rl_top"
-        />
+        android:layout_below="@+id/rl_top" />
 
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/rv_data"
-        android:layout_alignParentBottom="true"
-        >
+        android:layout_alignParentBottom="true">
 
 
         <TextView
             android:id="@+id/tv_cancel"
             android:layout_width="@dimen/dp133"
-            android:layout_height="@dimen/dp55"
-            android:background="@drawable/bg_ide_cancel"
-            android:text="@string/txt_cancel"
+            android:layout_height="@dimen/dp40"
             android:layout_centerVertical="true"
-            android:textColor="@color/txt_hint_input_gray_153"
+            android:layout_marginLeft="@dimen/dp42"
+            android:background="@drawable/bg_white_radio"
             android:gravity="center"
             android:paddingBottom="@dimen/dp2"
-            android:layout_marginLeft="@dimen/dp42"
+            android:text="@string/txt_cancel"
+            android:textColor="@color/txt_hint_input_gray_153"
             android:textSize="@dimen/sp16"
 
             />
+
         <TextView
             android:id="@+id/tv_confirm"
             android:layout_width="@dimen/dp133"
-            android:layout_height="@dimen/dp55"
+            android:layout_height="@dimen/dp40"
             android:layout_alignParentRight="true"
-            android:background="@drawable/bg_ide_confirm"
-            android:textColor="@color/white"
-            android:text="@string/txt_confirm"
             android:layout_centerVertical="true"
-            android:paddingBottom="@dimen/dp2"
             android:layout_marginRight="@dimen/dp42"
+            android:background="@drawable/bg_login_blue_title"
             android:gravity="center"
+            android:paddingBottom="@dimen/dp2"
+            android:text="@string/txt_confirm"
+            android:textColor="@color/white"
             android:textSize="@dimen/sp16"
 
             />

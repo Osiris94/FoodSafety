@@ -12,21 +12,44 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp179">
+        android:layout_height="@dimen/dp240">
 
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp140"
-            android:background="@drawable/bg_top_img" />
+            android:layout_height="@dimen/dp220"
+            android:background="@drawable/bg_top_img">
 
+        </ImageView>
 
-        <ImageView
-            android:layout_width="@dimen/dp78"
-            android:layout_height="@dimen/dp78"
+        <LinearLayout
+            android:layout_width="@dimen/dp250"
+            android:layout_height="@dimen/dp40"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/bg_login_regist" />
+            android:background="@drawable/bg_login_title"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="登录"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_login_blue_title"
+                android:gravity="center"
+                android:text="注册"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp14" />
+
+        </LinearLayout>
 
         <RelativeLayout
             android:id="@+id/rl_back"
@@ -85,8 +108,8 @@
                 android:id="@+id/edt_sex"
                 android:layout_width="@dimen/dp80"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
                 android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/dp25"
                 android:background="@null"
                 android:hint="@string/txt_regist_input_sex"
@@ -96,16 +119,17 @@
             <ImageView
                 android:layout_width="@dimen/dp23"
                 android:layout_height="@dimen/dp20"
-                android:layout_toLeftOf="@+id/edt_sex"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/dp15"
+                android:layout_toLeftOf="@+id/edt_sex"
                 android:background="@drawable/bg_regist_sex" />
         </RelativeLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp1"
-            android:background="@color/gray_line_e3"
-            />
+            android:background="@color/gray_line_e3" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp58">
@@ -129,6 +153,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp11"
                 android:layout_toRightOf="@+id/rl_phone"
+                android:inputType="phone"
                 android:background="@null"
                 android:hint="@string/txt_login_input_phone"
                 android:textColorHint="@color/txt_hint_input_gray_191"
@@ -136,11 +161,11 @@
 
 
         </RelativeLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp1"
-            android:background="@color/gray_line_e3"
-            />
+            android:background="@color/gray_line_e3" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -172,11 +197,12 @@
 
 
         </RelativeLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp1"
-            android:background="@color/gray_line_e3"
-            />
+            android:background="@color/gray_line_e3" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp58">
@@ -207,11 +233,11 @@
 
 
         </RelativeLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp1"
-            android:background="@color/gray_line_e3"
-            />
+            android:background="@color/gray_line_e3" />
 
 
     </LinearLayout>
@@ -220,16 +246,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_next"
-        android:layout_width="@dimen/dp305"
-        android:layout_height="@dimen/dp40"
-        android:layout_marginTop="@dimen/dp32"
-        android:background="@drawable/bg_round_blue_btn"
-        android:layout_centerInParent="true"
-        android:text="@string/txt_regist"
-        android:textColor="@color/white"
-        android:textSize="@dimen/sp16" />
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="@dimen/dp305"
+            android:layout_height="@dimen/dp40"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/dp32"
+            android:background="@drawable/bg_round_blue_btn"
+            android:text="@string/txt_regist"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp16" />
     </RelativeLayout>
 
 </LinearLayout>

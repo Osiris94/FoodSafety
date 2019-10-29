@@ -1,29 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_all"
+    android:orientation="vertical">
 
 
-    <include layout="@layout/layout_title"/>
+    <include layout="@layout/layout_title" />
+
     <com.osiris.food.view.PagerSlidingTabStrip
         android:id="@+id/tab_strip"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp40"
-        app:pstsIndicatorColor="@color/color_blue_btn"
         android:background="@color/white"
+        app:pstsDividerColor="@color/gray_220"
+        app:pstsDividerPadding="@dimen/dp1"
+        app:pstsIndicatorColor="@color/color_blue_btn"
         app:pstsIndicatorHeight="@dimen/dp40"
-        app:selectedTabTextColor="@color/white"
+        app:pstsShouldExpand="true"
         app:pstsUnderlineColor="@color/gray_220"
         app:pstsUnderlineHeight="@dimen/dp1"
-        app:pstsDividerPadding="@dimen/dp1"
-        app:pstsDividerColor="@color/gray_220"
-        app:pstsShouldExpand="true"/>
+        app:selectedTabTextColor="@color/white" />
+
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/tab_strip"/>
+        android:layout_below="@id/tab_strip" />
 
 </LinearLayout>

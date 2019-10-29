@@ -1,67 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@color/white"
-              android:orientation="vertical"
-    >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_all"
+    android:orientation="vertical">
 
 
-    <include layout="@layout/layout_title"/>
+    <include layout="@layout/layout_title" />
 
-<!--
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp53"
-        android:background="@color/bg_gray_238"
-        >
+    <!--
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp53"
+            android:background="@color/bg_gray_238"
+            >
 
+            <TextView
+                android:id="@+id/tv_training_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="2017~2018年度初级食品安全管理员继续教育"
+                android:textColor="@color/txt_important_black_51"
+                android:textSize="@dimen/sp15"
+                />
+
+
+        </RelativeLayout>
         <TextView
-            android:id="@+id/tv_training_title"
+            android:id="@+id/tv_training_explain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="2017~2018年度初级食品安全管理员继续教育"
-            android:textColor="@color/txt_important_black_51"
+            android:layout_marginLeft="@dimen/dp47"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="@dimen/dp47"
+            android:layout_marginTop="@dimen/dp12"
+            android:text="根据省局要求，2018~2019年度继续教育内容沿用2017~2018年度继续教育内容。"
+            android:textColor="@color/txt_black_102"
             android:textSize="@dimen/sp15"
             />
+                    android:background="@drawable/bg_training_content"
 
-
-    </RelativeLayout>
-    <TextView
-        android:id="@+id/tv_training_explain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dp47"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginRight="@dimen/dp47"
-        android:layout_marginTop="@dimen/dp12"
-        android:text="根据省局要求，2018~2019年度继续教育内容沿用2017~2018年度继续教育内容。"
-        android:textColor="@color/txt_black_102"
-        android:textSize="@dimen/sp15"
-        />
-                android:background="@drawable/bg_training_content"
-
--->
+    -->
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/dp21"
         android:layout_marginLeft="@dimen/dp21"
         android:layout_marginTop="@dimen/dp28"
-        >
+        android:layout_marginRight="@dimen/dp21">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_data"
-            android:layout_marginTop="@dimen/dp10"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10" />
 
 
     </RelativeLayout>
-
-
 
 
 </LinearLayout>

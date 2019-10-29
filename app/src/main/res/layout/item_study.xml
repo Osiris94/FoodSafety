@@ -7,12 +7,14 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp153"
-        android:layout_marginLeft="@dimen/dp15"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp10"
         android:layout_marginRight="@dimen/dp15"
+        android:layout_marginLeft="@dimen/dp15"
         android:layout_marginBottom="@dimen/dp10"
-        android:background="@drawable/bg_item_my_study">
+        android:paddingTop="@dimen/dp10"
+        android:paddingBottom="@dimen/dp10"
+        android:background="@color/bg_text">
 
 
         <LinearLayout
@@ -26,7 +28,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/dp25"
-                android:layout_marginTop="@dimen/dp25"
                 android:layout_marginRight="@dimen/dp25"
                 android:text="餐饮食品安全操作技术规范"
                 android:textColor="@color/txt_important_black_51"

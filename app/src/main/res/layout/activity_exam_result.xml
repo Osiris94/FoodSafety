@@ -2,14 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_all"
     android:orientation="vertical">
 
 
     <RelativeLayout
         android:id="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp64"
-        android:background="@drawable/bg_top_title">
+        android:layout_height="@dimen/dp64">
 
 
         <RelativeLayout
@@ -71,6 +71,7 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/title"
         android:layout_above="@+id/linear_button"
+        android:background="@color/white"
         android:scrollbars="none">
 
         <LinearLayout

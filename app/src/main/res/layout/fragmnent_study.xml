@@ -3,15 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_top_title"
+    android:background="@drawable/bg_all"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/bg_study_top" />
 
     <RelativeLayout
         android:id="@+id/rl_title"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp64"
-        android:visibility="gone">
+        android:layout_height="@dimen/dp64">
 
         <RelativeLayout
             android:id="@+id/rl_back"
@@ -27,12 +30,11 @@
 
         </RelativeLayout>
 
-
         <RelativeLayout
             android:layout_width="@dimen/dp202"
             android:layout_height="@dimen/dp26"
             android:layout_centerInParent="true"
-            android:background="@drawable/bg_top_title_name">
+            android:background="#33FFFFFF">
 
             <TextView
                 android:id="@+id/tv_title"
@@ -66,14 +68,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/dp40"
-                android:layout_marginTop="@dimen/dp22"
                 android:layout_marginRight="@dimen/dp40"
-                android:layout_marginBottom="@dimen/dp22"
                 android:focusable="true"
-                android:focusableInTouchMode="true"
-
-                >
-
+                android:focusableInTouchMode="true">
 
                 <TextView
                     android:id="@+id/tv_food_safe"
@@ -84,38 +81,16 @@
                     android:textColor="@color/white"
                     android:textSize="@dimen/sp18" />
 
-                <View
-                    android:id="@+id/view"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/dp3"
-                    android:layout_below="@+id/tv_food_safe"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="@dimen/dp10"
-                    android:layout_marginBottom="@dimen/dp10"
-                    android:background="@color/white" />
-
                 <TextView
                     android:id="@+id/tv_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/view"
+                    android:layout_below="@+id/tv_food_safe"
                     android:layout_centerHorizontal="true"
                     android:text="有效期2019.04.29至2019.08.30"
                     android:textColor="@color/white"
                     android:textSize="@dimen/sp15"
                     android:visibility="invisible" />
-
-
-            </RelativeLayout>
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_above="@+id/view_line"
-                android:layout_below="@+id/relative_info"
-                android:layout_marginTop="@dimen/dp70"
-                android:background="#F0F0F0">
 
             </RelativeLayout>
 
@@ -126,33 +101,20 @@
                 android:layout_below="@+id/relative_info"
                 android:layout_marginLeft="@dimen/dp19"
                 android:layout_marginRight="@dimen/dp19"
-                android:background="@drawable/bg_white_round"
                 android:orientation="vertical">
-
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp56"
                     android:layout_marginTop="@dimen/dp10">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="@dimen/dp17"
-                        android:text="@string/study"
-                        android:textColor="@color/txt_important_black_51"
-                        android:textSize="@dimen/sp14" />
-
-
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_alignParentRight="true"
+                        android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="@dimen/dp15"
                         android:orientation="horizontal">
-
 
                         <RelativeLayout
                             android:id="@+id/rl_apply_record"
@@ -166,11 +128,10 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
-                                android:drawableLeft="@drawable/bg_drawable_study"
                                 android:drawablePadding="@dimen/dp3"
                                 android:gravity="center"
                                 android:text="@string/apply_record"
-                                android:textColor="@color/txt_important_black_51"
+                                android:textColor="@color/white"
                                 android:textSize="@dimen/sp12" />
                         </RelativeLayout>
 
@@ -185,11 +146,10 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
-                                android:drawableLeft="@drawable/bg_drawable_study"
                                 android:drawablePadding="@dimen/dp3"
                                 android:gravity="center"
                                 android:text="@string/training_record"
-                                android:textColor="@color/txt_important_black_51"
+                                android:textColor="@color/white"
                                 android:textSize="@dimen/sp12" />
                         </RelativeLayout>
 
@@ -198,19 +158,12 @@
 
                 </RelativeLayout>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/dp4"
-                    android:layout_marginLeft="@dimen/dp15"
-                    android:layout_marginRight="@dimen/dp15"
-                    android:background="@color/gray_line_e3" />
-
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/dp30"
-                    android:layout_marginTop="@dimen/dp28"
+                    android:layout_marginTop="@dimen/dp15"
                     android:layout_marginRight="@dimen/dp30"
                     android:orientation="horizontal">
 
@@ -227,7 +180,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:text="500"
-                            android:textColor="@color/txt_important_black_51"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/sp20"
 
                             />
@@ -238,7 +191,7 @@
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="@dimen/dp10"
                             android:text="总积分"
-                            android:textColor="@color/txt_important_black_51"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/sp14"
 
                             />
@@ -259,7 +212,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:text="500"
-                            android:textColor="@color/txt_important_black_51"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/sp20"
 
                             />
@@ -270,7 +223,7 @@
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="@dimen/dp10"
                             android:text="学习积分"
-                            android:textColor="@color/txt_important_black_51"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/sp14"
 
                             />
@@ -291,7 +244,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:text="20"
-                            android:textColor="@color/txt_important_black_51"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/sp20"
 
                             />
@@ -302,7 +255,7 @@
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="@dimen/dp10"
                             android:text="还需学习积分"
-                            android:textColor="@color/txt_important_black_51"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/sp14"
 
                             />
@@ -336,6 +289,7 @@
                     android:drawableLeft="@drawable/bg_confirm_note"
                     android:drawablePadding="@dimen/dp3"
                     android:paddingBottom="@dimen/dp12"
+                    android:textColor="@color/txt_black_102"
                     android:text="@string/confirm_note" />
             </LinearLayout>
 
@@ -343,15 +297,13 @@
                 android:id="@+id/view_line"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp13"
-                android:layout_below="@+id/linear_middle"
-                android:background="#F0F0F0" />
+                android:layout_below="@+id/linear_middle"/>
 
             <LinearLayout
                 android:id="@+id/ll_study_find"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/view_line"
-                android:background="#F0F0F0"
                 android:gravity="center_vertical">
 
                 <LinearLayout
@@ -359,8 +311,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="19dp"
                     android:layout_marginRight="19dp"
-                    android:background="@color/white"
                     android:paddingLeft="19dp"
+                    android:background="@drawable/bg_home_news"
                     android:paddingRight="19dp">
 
                     <TextView
@@ -397,17 +349,16 @@
             <com.osiris.food.view.PagerSlidingTabStrip
                 android:id="@+id/tab_strip"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp40"
+                android:layout_height="@dimen/dp50"
                 android:layout_below="@+id/ll_study_find"
-                android:background="#F0F0F0"
                 android:paddingTop="10dp"
-                app:pstsDividerColor="#F0F0F0"
-                app:pstsIndicatorColor="@color/color_blue_btn"
-                app:pstsIndicatorHeight="@dimen/dp5"
+                app:pstsDividerColor="@color/white"
+                app:pstsIndicatorColor="#468AC9"
+                app:pstsIndicatorHeight="@dimen/dp6"
                 app:pstsIndicatorMarginLeft="@dimen/dp30"
                 app:pstsIndicatorMarginRight="@dimen/dp30"
                 app:pstsShouldExpand="true"
-                app:pstsUnderlineColor="#F0F0F0" />
+                app:pstsUnderlineColor="@color/transparent" />
 
             <com.osiris.food.view.MyViewPager
                 android:id="@+id/viewPager"

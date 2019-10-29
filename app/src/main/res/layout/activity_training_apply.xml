@@ -3,7 +3,7 @@
     android:id="@+id/linear_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/bg_all"
     android:orientation="vertical">
 
     <include layout="@layout/layout_title" />
@@ -12,9 +12,10 @@
         android:id="@+id/linear_content_commit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dp30"
-        android:layout_marginTop="@dimen/dp20"
-        android:layout_marginRight="@dimen/dp35"
+        android:paddingLeft="@dimen/dp25"
+        android:paddingRight="@dimen/dp25"
+        android:paddingTop="@dimen/dp20"
+        android:background="@color/white"
         android:orientation="vertical"
         android:visibility="visible">
 
@@ -195,6 +196,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp1"
             android:background="@color/gray_line_e3" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp58">
@@ -226,10 +228,12 @@
 
 
         </RelativeLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp1"
             android:background="@color/gray_line_e3" />
+
         <RelativeLayout
             android:id="@+id/rl_choose_third"
             android:layout_width="match_parent"
@@ -281,7 +285,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/rv_data"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
 
 
         <TextView

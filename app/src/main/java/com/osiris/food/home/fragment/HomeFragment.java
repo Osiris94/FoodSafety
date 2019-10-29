@@ -65,7 +65,7 @@ public class HomeFragment extends BaseFragment {
 	protected void initView() {
 
 
-		tv_title.setText("海陵区食品安全培训学习平台");
+		tv_title.setText("泰州市海陵区食品安全培训");
 		tv_news_title.setSelected(true);
 
 

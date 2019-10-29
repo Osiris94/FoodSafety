@@ -28,103 +28,102 @@ import me.jessyan.autosize.utils.LogUtils;
 
 public class MyStudyActivity extends BaseActivity {
 
-	@BindView(R.id.rl_back)
-	RelativeLayout rl_back;
-	@BindView(R.id.tv_title)
-	TextView tv_title;
-	@BindView(R.id.rv_data)
-	RecyclerView rv_data;
-	@BindView(R.id.rv_data_other)
-	RecyclerView rv_data_other;
+    @BindView(R.id.rl_back)
+    RelativeLayout rl_back;
+    @BindView(R.id.tv_title)
+    TextView tv_title;
+    @BindView(R.id.rv_data)
+    RecyclerView rv_data;
+    @BindView(R.id.rv_data_other)
+    RecyclerView rv_data_other;
 
-	private List<MyStudy.DataBean.VideoCourseBean> dataList = new ArrayList<>();
-	private StudyAdapter dataAdapter = new StudyAdapter(dataList);
-
-
-	private List<MyStudy.DataBean.PublicCourseBean> dataOtherList = new ArrayList<>();
-	private MyStudyOtherAdapter dataOtherAdapter = new MyStudyOtherAdapter(dataOtherList);
+    private List<MyStudy.DataBean.VideoCourseBean> dataList = new ArrayList<>();
+    private StudyAdapter dataAdapter = new StudyAdapter(dataList);
 
 
-	@Override
-	public int getLayoutResId() {
-		return R.layout.activity_study;
-	}
-
-	@Override
-	public void init() {
+    private List<MyStudy.DataBean.PublicCourseBean> dataOtherList = new ArrayList<>();
+    private MyStudyOtherAdapter dataOtherAdapter = new MyStudyOtherAdapter(dataOtherList);
 
 
-		tv_title.setText(getString(R.string.txt_title_mine_study));
+    @Override
+    public int getLayoutResId() {
+        return R.layout.activity_study;
+    }
 
-		rv_data.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false));
-		rv_data.setAdapter(dataAdapter);
-		dataAdapter.notifyDataSetChanged();
-
-		rv_data_other.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false));
-		rv_data_other.setAdapter(dataOtherAdapter);
-		dataOtherAdapter.notifyDataSetChanged();
+    @Override
+    public void init() {
 
 
-	//	getTodayScoreDetail();
+        tv_title.setText(getString(R.string.txt_title_mine_study));
 
-	}
+        rv_data.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        rv_data.setAdapter(dataAdapter);
+        dataAdapter.notifyDataSetChanged();
 
-	@Override
-	protected void onResume() {
-		super.onResume();
-		getStudySataDetail();
-	}
-
-	@OnClick({R.id.rl_back})
-	void onClick(View v){
-		switch (v.getId()){
-			case R.id.rl_back:
-				finish();
-				break;
-		}
-	}
+        rv_data_other.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        rv_data_other.setAdapter(dataOtherAdapter);
+        dataOtherAdapter.notifyDataSetChanged();
 
 
+        //	getTodayScoreDetail();
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        getStudySataDetail();
+    }
+
+    @OnClick({R.id.rl_back})
+    void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.rl_back:
+                finish();
+                break;
+        }
+    }
 
 
-	private void getStudySataDetail() {
+    private void getStudySataDetail() {
 
-		String url = ApiRequestTag.API_HOST + "/api/v1/users/learning";
+        String url = ApiRequestTag.API_HOST + "/api/v1/users/learning";
 
-		NetRequest.requestNoParamWithToken(url, ApiRequestTag.REQUEST_DATA, new NetRequestResultListener() {
-			@Override
-			public void requestSuccess(int tag, String successResult) {
-				LogUtils.d("zkf adsdadd:" + successResult);
-				JsonParser parser = new JsonParser();
-				JsonObject json = parser.parse(successResult).getAsJsonObject();
-				if (json.get("code").getAsInt() == 200) {
-					MyStudy.DataBean.VideoCourseBean[] data = JsonUtils.fromJson(
-							json.get("data").getAsJsonObject().get("video_course").getAsJsonArray(), MyStudy.DataBean.VideoCourseBean[].class);
-					if (dataList.size()>0) {
-						dataList.clear();
-					}
-					dataList.addAll(Arrays.asList(data));
-					dataAdapter.notifyDataSetChanged();
+        NetRequest.requestNoParamWithToken(url, ApiRequestTag.REQUEST_DATA, new NetRequestResultListener() {
+            @Override
+            public void requestSuccess(int tag, String successResult) {
+                LogUtils.d("zkf adsdadd:" + successResult);
+                JsonParser parser = new JsonParser();
+                JsonObject json = parser.parse(successResult).getAsJsonObject();
+                if (json.get("code").getAsInt() == 200) {
+                    MyStudy.DataBean.VideoCourseBean[] data = JsonUtils.fromJson(
+                            json.get("data").getAsJsonObject().get("video_course").getAsJsonArray(), MyStudy.DataBean.VideoCourseBean[].class);
+                    if (dataList.size() > 0) {
+                        dataList.clear();
+                    }
+                    dataList.addAll(Arrays.asList(data));
+                    dataAdapter.notifyDataSetChanged();
 
-					MyStudy.DataBean.PublicCourseBean[] dataOther = JsonUtils.fromJson(
-							json.get("data").getAsJsonObject().get("major_course").getAsJsonArray(), MyStudy.DataBean.PublicCourseBean[].class);
-					if (dataOtherList.size()>0) {
-						dataOtherList.clear();
-					}
-					dataOtherList.addAll(Arrays.asList(dataOther));
-					dataOtherAdapter.notifyDataSetChanged();
+                    if (json.get("data") != null) {
+                        MyStudy.DataBean.PublicCourseBean[] dataOther = JsonUtils.fromJson(
+                                json.get("data").getAsJsonObject().get("major_course").getAsJsonArray(), MyStudy.DataBean.PublicCourseBean[].class);
+                        if (dataOtherList.size() > 0) {
+                            dataOtherList.clear();
+                        }
+                        dataOtherList.addAll(Arrays.asList(dataOther));
+                    }
+                    dataOtherAdapter.notifyDataSetChanged();
 
-				}
-			}
+                }
+            }
 
-			@Override
-			public void requestFailure(int tag, int code, String msg) {
+            @Override
+            public void requestFailure(int tag, int code, String msg) {
 
-			}
-		});
+            }
+        });
 
-	}
-
+    }
 
 
 }

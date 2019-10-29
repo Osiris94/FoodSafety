@@ -7,12 +7,14 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp153"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dp15"
         android:layout_marginTop="@dimen/dp10"
         android:layout_marginRight="@dimen/dp15"
         android:layout_marginBottom="@dimen/dp10"
-        android:background="@drawable/bg_item_my_study">
+        android:background="@color/bg_text"
+        android:paddingTop="@dimen/dp10"
+        android:paddingBottom="@dimen/dp10">
 
 
         <LinearLayout
@@ -30,7 +32,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/dp25"
-                    android:layout_marginTop="@dimen/dp25"
                     android:layout_marginRight="@dimen/dp25"
                     android:ellipsize="marquee"
                     android:marqueeRepeatLimit="marquee_forever"
@@ -53,9 +54,7 @@
                     android:layout_height="@dimen/dp63"
                     android:layout_marginLeft="@dimen/dp25"
                     android:layout_marginTop="@dimen/dp13"
-                    android:background="@drawable/ic_place"
-
-                    />
+                    android:background="@drawable/ic_place" />
 
                 <LinearLayout
                     android:layout_width="match_parent"

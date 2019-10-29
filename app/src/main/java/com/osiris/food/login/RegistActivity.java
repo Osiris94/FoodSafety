@@ -29,65 +29,77 @@ import me.jessyan.autosize.utils.LogUtils;
 
 public class RegistActivity extends BaseActivity {
 
-	@BindView(R.id.edt_name)
-	EditText edt_name;
-	@BindView(R.id.edt_sex)
-	EditText edt_sex;
-	@BindView(R.id.edt_phone)
-	EditText edt_phone;
-	@BindView(R.id.edt_document_num)
-	EditText edt_document_num;
-	@BindView(R.id.edt_company_name)
-	EditText edt_company_name;
+    @BindView(R.id.edt_name)
+    EditText edt_name;
+    @BindView(R.id.edt_sex)
+    EditText edt_sex;
+    @BindView(R.id.edt_phone)
+    EditText edt_phone;
+    @BindView(R.id.edt_document_num)
+    EditText edt_document_num;
+    @BindView(R.id.edt_company_name)
+    EditText edt_company_name;
 
-	private int positionId = -1;
-
-
-	@Override
-	public int getLayoutResId() {
-		return R.layout.activity_regist;
-	}
-
-	@Override
-	public void init() {
-		positionId = getIntent().getIntExtra("identity", -1);
-
-	}
-
-	@OnClick({R.id.btn_next, R.id.rl_back})
-	void onClick(View v) {
-		switch (v.getId()) {
-			case R.id.btn_next:
-				if (TextUtils.isEmpty(edt_name.getText().toString()) || TextUtils.isEmpty(edt_sex.getText().toString()) ||
-						TextUtils.isEmpty(edt_phone.getText().toString()) ||
-						TextUtils.isEmpty(edt_document_num.getText().toString())
-						||TextUtils.isEmpty(edt_company_name.getText().toString())
-						) {
-					Toast.makeText(this, "请填写完整", Toast.LENGTH_SHORT).show();
-					return;
-				}else {
-					registApp();
-				}
-				break;
-			case R.id.rl_back:
-				finish();
-				break;
-		}
-	}
+    private int positionId = -1;
 
 
-	private void registApp() {
+    @Override
+    public int getLayoutResId() {
+        return R.layout.activity_regist;
+    }
 
-		String url = ApiRequestTag.API_HOST + "/api/v1/signup";
-		Map<String, String> paramMap = new HashMap<>();
+    @Override
+    public void init() {
+        positionId = getIntent().getIntExtra("identity", -1);
+
+    }
+
+    @OnClick({R.id.btn_next, R.id.rl_back})
+    void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_next:
+                if (TextUtils.isEmpty(edt_name.getText().toString()) || TextUtils.isEmpty(edt_sex.getText().toString()) ||
+                        TextUtils.isEmpty(edt_phone.getText().toString()) ||
+                        TextUtils.isEmpty(edt_document_num.getText().toString())
+                        || TextUtils.isEmpty(edt_company_name.getText().toString())
+                ) {
+                    Toast.makeText(this, "请填写完整", Toast.LENGTH_SHORT).show();
+                    return;
+                } else {
+                    registApp();
+                }
+                break;
+            case R.id.rl_back:
+                finish();
+                break;
+        }
+    }
 
 
-		paramMap.put("name", edt_name.getText().toString());
-		paramMap.put("gender", edt_sex.getText().toString());
-		paramMap.put("phone", edt_phone.getText().toString());
+    private void registApp() {
 
-		paramMap.put("id_type", "1");
-		paramMap.put("education", "5");
+        String phone = edt_phone.getText().toString();
+        String idNo = edt_document_num.getText().toString();
+
+        if (!TextUtils.isEmpty(phone) && phone.length() != 11) {
+            Toast.makeText(this, "请输入正确的手机号", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (!TextUtils.isEmpty(idNo) && idNo.length() != 18) {
+            Toast.makeText(this, "请输入正确的身份证号", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        String url = ApiRequestTag.API_HOST + "/api/v1/signup";
+        Map<String, String> paramMap = new HashMap<>();
+
+        paramMap.put("name", edt_name.getText().toString());
+        paramMap.put("gender", edt_sex.getText().toString());
+        paramMap.put("phone", phone);
+
+        paramMap.put("id_type", "1");
+        paramMap.put("education", "5");
 
 		/*if (document.contains("身份证")) {
 			paramMap.put("id_type", "1");
@@ -112,72 +124,72 @@ public class RegistActivity extends BaseActivity {
 			paramMap.put("education", "7");
 		}*/
 
-		paramMap.put("id_no", edt_document_num.getText().toString());
-		paramMap.put("email", "339998877@qq.com");
-		paramMap.put("industry_type", "食品安全");
-		paramMap.put("position", "管理员");
-		paramMap.put("company", edt_company_name.getText().toString());
-		paramMap.put("company_tel", "0512-8988988282");
-		paramMap.put("province", "1");
-		paramMap.put("city","2");
-		paramMap.put("address", "江苏省泰州市");
-		//paramMap.put("district", cityId+"01");
-		paramMap.put("password", "123456");
-		paramMap.put("type", String.valueOf(positionId));
+        paramMap.put("id_no", idNo);
+        paramMap.put("email", "339998877@qq.com");
+        paramMap.put("industry_type", "食品安全");
+        paramMap.put("position", "管理员");
+        paramMap.put("company", edt_company_name.getText().toString());
+        paramMap.put("company_tel", "0512-8988988282");
+        paramMap.put("province", "1");
+        paramMap.put("city", "2");
+        paramMap.put("address", "江苏省泰州市");
+        //paramMap.put("district", cityId+"01");
+        paramMap.put("password", "123456");
+        paramMap.put("type", String.valueOf(positionId));
 
 
-		Set keys = paramMap.keySet();
-		for (Object key : keys) {
-			System.out.print(key + "=" + paramMap.get(key));
-		}
-		System.out.println("\n----------------------");
-		//3\***
-		Set<Map.Entry<String, String>> ms = paramMap.entrySet();
-		for (Map.Entry entry : ms) {
-			System.out.print(entry.getKey() + "=" + entry.getValue());
-		}
+        Set keys = paramMap.keySet();
+        for (Object key : keys) {
+            System.out.print(key + "=" + paramMap.get(key));
+        }
+        System.out.println("\n----------------------");
+        //3\***
+        Set<Map.Entry<String, String>> ms = paramMap.entrySet();
+        for (Map.Entry entry : ms) {
+            System.out.print(entry.getKey() + "=" + entry.getValue());
+        }
 
 
-		NetRequest.requestParamWithToken(url, ApiRequestTag.REQUEST_DATA, paramMap, new NetRequestResultListener() {
-			@Override
-			public void requestSuccess(int tag, String successResult) {
-				LogUtils.d("zkf  sdsdd :" + successResult);
-				JsonParser parser = new JsonParser();
-				JsonObject json = parser.parse(successResult).getAsJsonObject();
-				if (json.get("code").getAsInt() == 200) {
-					showRegistComplete();
-				}
-			}
+        NetRequest.requestParamWithToken(url, ApiRequestTag.REQUEST_DATA, paramMap, new NetRequestResultListener() {
+            @Override
+            public void requestSuccess(int tag, String successResult) {
+                LogUtils.d("zkf  sdsdd :" + successResult);
+                JsonParser parser = new JsonParser();
+                JsonObject json = parser.parse(successResult).getAsJsonObject();
+                if (json.get("code").getAsInt() == 200) {
+                    showRegistComplete();
+                }
+            }
 
-			@Override
-			public void requestFailure(int tag, int code, String msg) {
-				LogUtils.d("zkf code:" + code);
-			}
-		});
-
-
-	}
-
-	private void showRegistComplete() {
-		RegistCompleteDialog.Builder preventBuilder = new RegistCompleteDialog.Builder(this);
-		preventBuilder.setPositiveButton(new DialogInterface.OnClickListener() {
-			@Override
-			public void onClick(DialogInterface dialogInterface, int i) {
-				dialogInterface.dismiss();
-				postEvent(new CloseEvent());
-				finish();
-			}
-		});
-
-		preventBuilder.create().show();
-	}
+            @Override
+            public void requestFailure(int tag, int code, String msg) {
+                LogUtils.d("zkf code:" + code);
+            }
+        });
 
 
-	@Subscribe(threadMode = ThreadMode.MAIN)
-	public void onGetMessage(CloseEvent closeEvent) {
-		finish();
+    }
 
-	}
+    private void showRegistComplete() {
+        RegistCompleteDialog.Builder preventBuilder = new RegistCompleteDialog.Builder(this);
+        preventBuilder.setPositiveButton(new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+                postEvent(new CloseEvent());
+                finish();
+            }
+        });
+
+        preventBuilder.create().show();
+    }
+
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onGetMessage(CloseEvent closeEvent) {
+        finish();
+
+    }
 
 
 }

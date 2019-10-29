@@ -3,14 +3,12 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-        
 
-
-    <color name="txt_important_black_51">#333333</color>
+    <color name="txt_important_black_51">#808080</color>
     <color name="txt_auxiliary_gray">#999999</color>
-    <color name="txt_black_102">#666666</color>
+    <color name="txt_black_102">#bfbfbf</color>
     <color name="txt_hint_input_gray_191">#bfbfbf</color>
-    <color name="txt_hint_input_gray_153">#999999</color>
+    <color name="txt_hint_input_gray_153">#bfbfbf</color>
     <color name="gray_line_e3">#E3E3E3</color>
     <color name="gray_background_245">#F5F5F5</color>
     <color name="txt_gray_151">#979797</color>
@@ -23,11 +21,12 @@
     <!--
         <color name="color_blue_btn">#95D5FB</color>
     -->
-    <color name="color_blue_btn">#3FB3F8</color>
+    <color name="color_blue_btn">#35467D</color>
     <color name="color_blue_elevation">#95D5FB</color>
     <color name="white">#ffffff</color>
 
 
     <color name="darker_gray">#808080</color>
+    <color name="bg_text">#FFFFFF</color>
 
 </resources>

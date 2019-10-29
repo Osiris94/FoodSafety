@@ -2,14 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_all"
     android:orientation="vertical">
 
 
     <RelativeLayout
         android:id="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp64"
-        android:background="@drawable/bg_top_title">
+        android:layout_height="@dimen/dp64">
 
 
         <RelativeLayout
@@ -69,8 +69,9 @@
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/title"
         android:layout_above="@+id/linear_button"
+        android:layout_below="@+id/title"
+        android:background="@color/white"
         android:scrollbars="none">
 
         <LinearLayout
@@ -290,7 +291,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/dp70"
+        android:paddingBottom="@dimen/dp70"
+        android:background="@color/white"
         android:orientation="horizontal">
 
 

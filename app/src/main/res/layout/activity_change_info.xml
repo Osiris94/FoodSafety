@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@color/white"
-              android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_all"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp64"
-        android:background="@drawable/bg_top_title"
-        >
+        android:layout_height="@dimen/dp64">
 
 
         <RelativeLayout
@@ -21,8 +19,7 @@
                 android:layout_width="@dimen/dp10"
                 android:layout_height="@dimen/dp17"
                 android:layout_centerInParent="true"
-                android:background="@drawable/bg_back"
-                />
+                android:background="@drawable/bg_back" />
 
         </RelativeLayout>
 
@@ -31,8 +28,7 @@
             android:layout_width="@dimen/dp202"
             android:layout_height="@dimen/dp26"
             android:layout_centerInParent="true"
-            android:background="@drawable/bg_top_title_name"
-            >
+            android:background="@drawable/bg_top_title_name">
 
             <TextView
                 android:id="@+id/tv_title"
@@ -41,8 +37,7 @@
                 android:layout_centerInParent="true"
                 android:text="修改资料"
                 android:textColor="@color/white"
-                android:textSize="@dimen/sp16"
-                />
+                android:textSize="@dimen/sp16" />
 
 
         </RelativeLayout>
@@ -51,19 +46,17 @@
             android:id="@+id/rl_confirm"
             android:layout_width="@dimen/dp80"
             android:layout_height="match_parent"
-            android:layout_alignParentRight="true"
-            >
+            android:layout_alignParentRight="true">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:textSize="@dimen/sp14"
                 android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/dp20"
-                android:textColor="@color/white"
                 android:text="确认"
-                />
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp14" />
         </RelativeLayout>
 
     </RelativeLayout>
@@ -71,28 +64,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tv_change"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="修改"
             android:layout_marginLeft="@dimen/dp10"
-            android:textSize="@dimen/sp16"
+            android:text="修改"
             android:textColor="@color/txt_important_black_51"
-            />
+            android:textSize="@dimen/sp16" />
 
-    <EditText
-        android:id="@+id/edit_change"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dp10"
-        android:textColor="@color/txt_important_black_51"
-        android:textCursorDrawable = "@null"
-        android:theme="@style/MyEditText"
-        />
+        <EditText
+            android:id="@+id/edit_change"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:textColor="@color/txt_important_black_51"
+            android:textCursorDrawable="@null"
+            android:theme="@style/MyEditText" />
     </LinearLayout>
 
 </LinearLayout>

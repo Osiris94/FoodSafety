@@ -1,16 +1,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:background="@drawable/bg_top_bottom_line"
-              android:orientation="horizontal"
-            >
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_top_bottom_line"
+    android:orientation="horizontal">
 
     <LinearLayout
         android:id="@+id/ll_apply"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:gravity="bottom"
         android:layout_weight="1"
+        android:gravity="bottom"
         android:orientation="vertical"
         android:paddingTop="@dimen/dp5">
 
@@ -18,10 +17,9 @@
             android:id="@+id/img_apply"
             android:layout_width="@dimen/dp22"
             android:layout_height="@dimen/dp33"
-            android:layout_marginBottom="@dimen/dp5"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/home_apply_normal"
-           />
+            android:layout_marginBottom="@dimen/dp5"
+            android:src="@drawable/home_apply_normal" />
 
     </LinearLayout>
 
@@ -41,12 +39,12 @@
 
             <ImageView
                 android:id="@+id/img_study"
-                android:layout_width="@dimen/dp22"
-                android:layout_height="@dimen/dp33"
-                android:layout_marginBottom="@dimen/dp5"
+                android:layout_width="@dimen/dp35"
+                android:layout_height="@dimen/dp35"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/home_study_normal"/>
+                android:layout_marginBottom="@dimen/dp5"
+                android:src="@drawable/home_study_normal" />
 
 
         </RelativeLayout>
@@ -57,7 +55,7 @@
     <ImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1" />
 
     <LinearLayout
         android:id="@+id/ll_exam"
@@ -72,9 +70,9 @@
             android:id="@+id/img_exam"
             android:layout_width="@dimen/dp22"
             android:layout_height="@dimen/dp33"
-            android:layout_marginBottom="@dimen/dp5"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/home_exam_normal"/>
+            android:layout_marginBottom="@dimen/dp5"
+            android:src="@drawable/home_exam_normal" />
 
 
     </LinearLayout>
@@ -90,13 +88,13 @@
 
         <ImageView
             android:id="@+id/img_mine"
-            android:layout_width="@dimen/dp22"
+            android:layout_width="@dimen/dp28"
             android:layout_height="@dimen/dp33"
-            android:layout_marginBottom="@dimen/dp5"
             android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dp5"
             android:padding="@dimen/dp2"
             android:scaleType="fitXY"
-            android:src="@drawable/home_mine_normal"/>
+            android:src="@drawable/home_mine_normal" />
 
     </LinearLayout>
 </LinearLayout>

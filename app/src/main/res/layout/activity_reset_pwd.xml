@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_all">
 
-
-    <include layout="@layout/layout_title"/>
-
+    <include layout="@layout/layout_title" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,8 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp1"
             android:layout_marginTop="@dimen/dp20"
-            android:background="@color/gray_line_e3"
-            />
+            android:background="@color/gray_line_e3" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,7 +32,7 @@
             <ImageView
                 android:layout_width="@dimen/dp15"
                 android:layout_height="@dimen/dp25"
-                android:background="@drawable/bg_login_phone"/>
+                android:background="@drawable/bg_login_phone" />
 
 
             <EditText
@@ -46,7 +44,7 @@
                 android:hint="@string/txt_login_input_phone"
                 android:inputType="number"
                 android:textColorHint="@color/txt_hint_input_gray_191"
-                android:textSize="@dimen/sp14"/>
+                android:textSize="@dimen/sp14" />
 
 
         </LinearLayout>
@@ -54,22 +52,20 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp1"
-            android:background="@color/gray_line_e3"
-            />
+            android:background="@color/gray_line_e3" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/tv_reset"
-        android:layout_width="@dimen/dp161"
-        android:layout_height="@dimen/dp42"
+        android:layout_width="@dimen/dp240"
+        android:layout_height="@dimen/dp40"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/dp71"
-        android:background="@drawable/bg_edu_button_dialog"
+        android:background="@drawable/bg_button"
         android:gravity="center"
         android:text="重置密码"
         android:textColor="@color/white"
-        android:textSize="@dimen/sp16"
-        />
+        android:textSize="@dimen/sp16" />
 
 
 </LinearLayout>

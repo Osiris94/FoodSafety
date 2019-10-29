@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/bg_all"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".login.LoginActivity">
@@ -12,36 +12,46 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp179">
-
+        android:layout_height="@dimen/dp240">
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp140"
-            android:background="@drawable/bg_top_img" />
+            android:layout_height="@dimen/dp220"
+            android:background="@drawable/bg_top_img">
 
 
-        <ImageView
-            android:layout_width="@dimen/dp78"
-            android:layout_height="@dimen/dp78"
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="@dimen/dp250"
+            android:layout_height="@dimen/dp40"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/bg_login_regist" />
+            android:background="@drawable/bg_login_title"
+            android:orientation="horizontal">
 
-        <RelativeLayout
-            android:id="@+id/rl_back"
-            android:layout_width="@dimen/dp25"
-            android:layout_height="@dimen/dp25"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="@dimen/dp10"
-            android:layout_marginTop="@dimen/dp25">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
 
-            <ImageView
-                android:layout_width="@dimen/dp10"
-                android:layout_height="@dimen/dp17"
-                android:background="@drawable/bg_back" />
+                android:gravity="center"
+                android:text="登录"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14" />
 
-        </RelativeLayout>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_login_blue_title"
+                android:gravity="center"
+                android:text="注册"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp14" />
+
+        </LinearLayout>
+
     </RelativeLayout>
 
 
@@ -83,11 +93,12 @@
 
 
         </RelativeLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp1"
-            android:background="@color/gray_line_e3"
-            />
+            android:background="@color/gray_line_e3" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp58">
@@ -118,11 +129,12 @@
 
 
         </RelativeLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp1"
-            android:background="@color/gray_line_e3"
-            />
+            android:background="@color/gray_line_e3" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp58">
@@ -153,11 +165,12 @@
 
 
         </RelativeLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp1"
-            android:background="@color/gray_line_e3"
-            />
+            android:background="@color/gray_line_e3" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp58">
@@ -188,11 +201,12 @@
 
 
         </RelativeLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp1"
-            android:background="@color/gray_line_e3"
-            />
+            android:background="@color/gray_line_e3" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp58">
@@ -223,11 +237,12 @@
 
 
         </RelativeLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp1"
-            android:background="@color/gray_line_e3"
-            />
+            android:background="@color/gray_line_e3" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp58">
@@ -255,13 +270,13 @@
                 android:hint="@string/txt_input_company_detail_location"
                 android:textColorHint="@color/txt_hint_input_gray_191"
                 android:textSize="@dimen/sp14" />
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp1"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="@dimen/dp3"
-                android:background="@color/gray_line_e3"
-                />
+                android:background="@color/gray_line_e3" />
 
         </RelativeLayout>
 

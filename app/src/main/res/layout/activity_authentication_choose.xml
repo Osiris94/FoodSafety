@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_all"
+    android:orientation="vertical">
 
 
-    <include layout="@layout/layout_title"/>
+    <include layout="@layout/layout_title" />
 
 
     <RelativeLayout
@@ -16,35 +17,31 @@
         android:layout_marginTop="@dimen/dp18"
         android:layout_marginRight="@dimen/dp15"
         android:layout_marginBottom="@dimen/dp10"
-        android:background="@drawable/bg_auth_background"
-        >
+        android:background="@drawable/bg_auth_background">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_auth_card"
-                android:layout_marginTop="@dimen/dp20"
                 android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp20"
+                android:text="@string/txt_auth_card"
                 android:textColor="@color/txt_important_black_51"
                 android:textSize="@dimen/sp15"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp10"
                 android:text="@string/txt_auth_card_desc"
                 android:textColor="@color/txt_hint_input_gray_153"
-                android:layout_marginTop="@dimen/dp10"
-                android:layout_marginLeft="@dimen/dp20"
-                android:textSize="@dimen/sp12"
-                />
+                android:textSize="@dimen/sp12" />
 
 
         </LinearLayout>
@@ -52,11 +49,10 @@
         <ImageView
             android:layout_width="@dimen/dp125"
             android:layout_height="@dimen/dp77"
-            android:background="@drawable/bg_auth_card"
             android:layout_alignParentRight="true"
             android:layout_marginTop="@dimen/dp20"
             android:layout_marginRight="@dimen/dp28"
-            />
+            android:background="@drawable/bg_auth_card" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -66,35 +62,31 @@
         android:layout_marginLeft="@dimen/dp15"
         android:layout_marginRight="@dimen/dp15"
         android:layout_marginBottom="@dimen/dp10"
-        android:background="@drawable/bg_auth_background"
-        >
+        android:background="@drawable/bg_auth_background">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_auth_third"
-                android:layout_marginTop="@dimen/dp20"
                 android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp20"
+                android:text="@string/txt_auth_third"
                 android:textColor="@color/txt_important_black_51"
                 android:textSize="@dimen/sp15"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp10"
                 android:text="@string/txt_auth_third_desc"
                 android:textColor="@color/txt_hint_input_gray_153"
-                android:layout_marginTop="@dimen/dp10"
-                android:layout_marginLeft="@dimen/dp20"
-                android:textSize="@dimen/sp12"
-                />
+                android:textSize="@dimen/sp12" />
 
 
         </LinearLayout>
@@ -102,11 +94,10 @@
         <ImageView
             android:layout_width="@dimen/dp125"
             android:layout_height="@dimen/dp77"
-            android:background="@drawable/bg_auth_third"
             android:layout_alignParentRight="true"
             android:layout_marginTop="@dimen/dp20"
             android:layout_marginRight="@dimen/dp28"
-            />
+            android:background="@drawable/bg_auth_third" />
 
     </RelativeLayout>
 </LinearLayout>
