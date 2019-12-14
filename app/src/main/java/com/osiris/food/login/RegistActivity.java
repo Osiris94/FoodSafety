@@ -2,6 +2,7 @@ package com.osiris.food.login;
 
 import android.content.DialogInterface;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -94,13 +95,6 @@ public class RegistActivity extends BaseActivity {
         String url = ApiRequestTag.API_HOST + "/api/v1/signup";
         Map<String, String> paramMap = new HashMap<>();
 
-        paramMap.put("name", edt_name.getText().toString());
-        paramMap.put("gender", edt_sex.getText().toString());
-        paramMap.put("phone", phone);
-
-        paramMap.put("id_type", "1");
-        paramMap.put("education", "5");
-
 		/*if (document.contains("身份证")) {
 			paramMap.put("id_type", "1");
 		} else if (document.contains("军官证")) {
@@ -123,7 +117,11 @@ public class RegistActivity extends BaseActivity {
 		} else if (eduction.contains("博士")) {
 			paramMap.put("education", "7");
 		}*/
-
+        paramMap.put("name", edt_name.getText().toString());
+        paramMap.put("gender", edt_sex.getText().toString());
+        paramMap.put("phone", phone);
+        paramMap.put("id_type", "1");
+        paramMap.put("education", "5");
         paramMap.put("id_no", idNo);
         paramMap.put("email", "339998877@qq.com");
         paramMap.put("industry_type", "食品安全");
@@ -149,11 +147,10 @@ public class RegistActivity extends BaseActivity {
             System.out.print(entry.getKey() + "=" + entry.getValue());
         }
 
-
         NetRequest.requestParamWithToken(url, ApiRequestTag.REQUEST_DATA, paramMap, new NetRequestResultListener() {
             @Override
             public void requestSuccess(int tag, String successResult) {
-                LogUtils.d("zkf  sdsdd :" + successResult);
+                Log.e("xzw",successResult);
                 JsonParser parser = new JsonParser();
                 JsonObject json = parser.parse(successResult).getAsJsonObject();
                 if (json.get("code").getAsInt() == 200) {
